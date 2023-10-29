@@ -1,0 +1,33 @@
+.login {
+  margin: 5px 0; /* Spacing between buttons */
+}
+
+.loginButton {
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+  opacity: 0.8; /* Button opacity change on hover */
+}
+
+.google .loginButton {
+  background-color: #DB4437;
+  color: white;
+}
+
+.facebook .loginButton {
+  background-color: #1877F2;
+  color: white;
+}
+
+.line .loginButton {
+  background-color: #00B900;
+  color: white;
+}

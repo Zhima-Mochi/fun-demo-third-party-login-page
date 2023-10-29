@@ -1,13 +1,15 @@
 import React from 'react';
+import { SERVER_URL } from '../app/config/server';
+import styles from './Login.module.css';
 
 const Login: React.FC<{ provider: string }> = ({ provider }) => {
     const handleLogin = () => {
-        window.location.href = 'http://localhost:3000/login/' + provider+'?redirect='+window.location.pathname;
+        window.location.href = SERVER_URL + '/login/' + provider + '?redirect=' + window.location.pathname;
     };
 
     return (
-        <div className="login">
-            <button onClick={handleLogin} className="login__button">Login with {provider}</button>
+        <div className={`${styles.login} ${styles[provider.toLowerCase()]}`}>
+            <button onClick={handleLogin} className={styles.loginButton}>Sign in with {provider}</button>
         </div>
     );
 };
